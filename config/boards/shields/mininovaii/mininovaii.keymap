@@ -47,10 +47,10 @@
 
         both_layer {
             bindings = <
-    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans  &trans  &trans  &trans &trans &kp DEL
-    &trans     &trans       &trans       &trans       &trans  &trans  &trans  &trans &kp AT
-    &trans     &trans       &trans       &trans       &trans  &trans  &trans  &trans
-    &trans     &trans       &out OUT_TOG &trans       &trans
+    &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans  &trans  &trans  &trans &trans &kp DEL
+    &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans &kp AT
+    &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans
+    &out OUT_USB &trans       &out OUT_TOG &trans       &OUT_BLE
             >;
         };
 
