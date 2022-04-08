@@ -15,15 +15,39 @@
 #define BOTH     3
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_dash {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp MINUS>;
+        };
+
+        combo_eq {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp EQUAL>;
+        };
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-    &kp Q      &kp W       &kp E      &kp R        &kp T      &kp Y     &kp U   &kp I     &kp O     &kp P
-    &kp A      &kp S       &kp D      &kp F        &kp G      &kp H     &kp J   &kp K     &kp L
-    &kp Z      &kp X       &kp C      &kp V        &kp B      &kp N     &kp M   &kp DOT
-    &kp LSHIFT &mo LOWER   &kp SPACE  &mo RAISE    &kp ENTER
+    &kp Q      &kp W       &kp E      &kp R           &kp T      &kp Y     &kp U   &kp I     &kp O     &kp P
+    &kp A      &kp S       &kp D      &kp F           &kp G      &kp H     &kp J   &kp K     &kp L
+    &kp Z      &kp X       &kp C      &kp V           &kp B      &kp N     &kp M   &kp DOT
+    &kp LSHIFT &mo LOWER   &kp SPACE  &lt RAISE ENTER &kp ENTER
             >;
         };
 
