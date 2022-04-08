@@ -15,18 +15,24 @@
 #define BOTH     3
 
 // -----------------------------------
-// | ESC | ESC |    |    |    |    |  - | -= | =< | <  |   (< = bksp)
-// |     |     |    |    |    |    |    |    |    |    |
-// |     |     |    |    |    |    |    |    |    |    |
-// |     |     |    |    |         |    |    |    |    |
+// | TAB:TAB |    |    |    |    |   -:-  =:=  <:<   |   (< = bksp)
+// | ESC:ESC |    |    |    |    |    |   #:#   |
+// |    |    |    |    |    |    |    |    |
+//           |    |    |         |    |    |
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        combo_tab {
             timeout-ms = <50>;
             key-positions = <0 1>;
+            bindings = <&kp TAB>;
+        };
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
             bindings = <&kp ESC>;
         };
 
@@ -47,6 +53,13 @@
             key-positions = <8 9>;
             bindings = <&kp BSPC>;
         };
+
+        combo_hash {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp NON_US_HASH>;
+        };
+
     };
 };
 
